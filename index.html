@@ -3,65 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> BRO BENGALI'S Stories</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #3498db;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .story {
-            margin-bottom: 20px;
-        }
-        .story h2 {
-            color: #3498db;
-        }
-        .story p {
-            color: #555;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #3498db;
-            color: white;
-        }
-    </style>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Awesome Stories</h1>
-        <p>A collection of inspiring tales</p>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <div class="container">
-        <div class="story">
-            <h2>The Brave Little Tailor</h2>
-            <p>Once upon a time, in a faraway land, there lived a tailor who was brave and clever. One day, he managed to kill seven flies with a single blow. Proud of his feat, he stitched a belt that read "Seven at One Blow" and set off to seek his fortune...</p>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Write a brief introduction about yourself here.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>Description of project 1.</p>
         </div>
-        <div class="story">
-            <h2>The Clever Fox</h2>
-            <p>In a dense forest, a fox was known for his cunning ways. He could outsmart any animal and always found a way to get what he wanted. One day, he met a crow with a piece of cheese in its beak. The fox, thinking quickly, flattered the crow into singing, and as the crow opened its mouth, the cheese fell...</p>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>Description of project 2.</p>
         </div>
-        <div class="story">
-            <h2>The Kind Woodcutter</h2>
-            <p>Deep in the forest, a kind woodcutter lived with his family. One day, while chopping wood, he found a golden axe. Despite his poverty, he decided to return the axe to its rightful owner. His honesty was rewarded by the forest spirits, who granted him wealth and happiness...</p>
-        </div>
-    </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
     <footer>
-        <p>&copy;  BRO BENGALI LIMITED </p>
+        <p>&copy; 2024 Your Name</p>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
