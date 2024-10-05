@@ -3,234 +3,271 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/3.0.24/tailwind.min.css">
+    <title>Rahul Kumar Patra - Frontend Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    primary: '#3498db',
+                    secondary: '#2c3e50',
+                    accent: '#e74c3c',
+                },
+                fontFamily: {
+                    sans: ['Roboto', 'sans-serif'],
+                    heading: ['Montserrat', 'sans-serif'],
+                    mono: ['Courier New', 'monospace'],
+                },
+            }
+        }
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Blinking cursor styles removed */
+    </style>
 </head>
-<body>
-    <div class="flex flex-col min-h-[100dvh]">
-        <!-- Hero Section -->
-        <section class="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-primary to-primary-foreground">
-            <div class="container px-4 md:px-6 text-center text-primary-foreground">
-                <div class="space-y-4">
-                    <h1 class="text-4xl font-bold tracking-tighter sm:text-6xl md:text-7xl animate-cursor">John Doe</h1>
-                    <h2 class="text-2xl font-medium sm:text-3xl animate-cursor-blink">Frontend Developer</h2>
-                    <p class="max-w-[700px] mx-auto text-lg md:text-xl">
-                        I'm a passionate frontend developer with a strong focus on creating beautiful and user-friendly web applications.
-                    </p>
-                    <div class="flex justify-center gap-4">
-                        <a
-                            class="inline-flex h-10 items-center justify-center rounded-md bg-primary-foreground px-6 text-sm font-medium text-primary shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                            href="#"
-                        >
-                            View Projects
-                        </a>
-                        <a
-                            class="inline-flex h-10 items-center justify-center rounded-md border border-primary-foreground bg-primary px-6 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                            href="#"
-                        >
-                            Contact Me
-                        </a>
+<body class="bg-gray-100 font-sans text-secondary">
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-heading font-bold text-primary">Rahul Kumar Patra</a>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#about" class="hover:text-primary transition-colors">About</a></li>
+                <li><a href="#skills" class="hover:text-primary transition-colors">Skills</a></li>
+                <li><a href="#projects" class="hover:text-primary transition-colors">Projects</a></li>
+                <li><a href="#contact" class="hover:text-primary transition-colors">Contact</a></li>
+            </ul>
+            <button id="mobile-menu-button" class="md:hidden text-secondary">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <ul class="px-4 py-2">
+                <li><a href="#about" class="block py-2 hover:text-primary transition-colors">About</a></li>
+                <li><a href="#skills" class="block py-2 hover:text-primary transition-colors">Skills</a></li>
+                <li><a href="#projects" class="block py-2 hover:text-primary transition-colors">Projects</a></li>
+                <li><a href="#contact" class="block py-2 hover:text-primary transition-colors">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="bg-primary text-white py-20">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-6xl font-heading font-bold mb-4">Rahul Kumar Patra</h1>
+                <p class="text-xl md:text-2xl mb-8">Frontend Developer | UI/UX Enthusiast</p>
+                <a href="#contact" class="bg-accent hover:bg-opacity-90 text-white font-bold py-3 px-6 rounded-full transition-colors">Get in Touch</a>
+            </div>
+        </section>
+
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-heading font-bold mb-8 text-center">About Me</h2>
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/3 mb-8 md:mb-0">
+                        <div class="w-64 h-64 mx-auto bg-gray-300 rounded-full flex items-center justify-center text-gray-500">
+                            <i class="fas fa-user-circle text-6xl"></i>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 md:pl-8">
+                        <p class="text-lg mb-4">Hello! I'm Rahul Kumar Patra, a passionate frontend developer with a keen eye for creating beautiful and functional user interfaces. With a strong foundation in HTML, CSS, and JavaScript, I specialize in building responsive and interactive web applications that provide exceptional user experiences.</p>
+                        <p class="text-lg mb-4">My journey in web development started with a fascination for how design and technology intersect to create meaningful digital experiences. Since then, I've honed my skills in modern frontend frameworks and libraries, always staying up-to-date with the latest industry trends and best practices.</p>
+                        <p class="text-lg">When I'm not coding, you can find me exploring new design trends, contributing to open-source projects, or sharing my knowledge through blog posts and community events.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Featured Projects Section -->
-        <section class="w-full py-12 md:py-24 lg:py-32">
-            <div class="container px-4 md:px-6">
-                <div class="space-y-4 text-center">
-                    <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Featured Projects</h2>
-                    <p class="max-w-[700px] mx-auto text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                        Check out some of my recent work and see what I can do.
-                    </p>
+        <section id="skills" class="bg-gray-200 py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-heading font-bold mb-8 text-center">Skills & Expertise</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                        <i class="fab fa-html5 text-4xl text-primary mb-4"></i>
+                        <h3 class="font-bold mb-2">HTML5</h3>
+                        <p>Semantic markup, accessibility</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                        <i class="fab fa-css3-alt text-4xl text-primary mb-4"></i>
+                        <h3 class="font-bold mb-2">CSS3</h3>
+                        <p>Responsive design, animations</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                        <i class="fab fa-js text-4xl text-primary mb-4"></i>
+                        <h3 class="font-bold mb-2">JavaScript</h3>
+                        <p>ES6+, DOM manipulation</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                        <i class="fab fa-react text-4xl text-primary mb-4"></i>
+                        <h3 class="font-bold mb-2">React</h3>
+                        <p>Component-based architecture</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                        <i class="fab fa-vuejs text-4xl text-primary mb-4"></i>
+                        <h3 class="font-bold mb-2">Vue.js</h3>
+                        <p>Progressive framework</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                        <i class="fab fa-sass text-4xl text-primary mb-4"></i>
+                        <h3 class="font-bold mb-2">Sass</h3>
+                        <p>CSS preprocessing</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                        <i class="fab fa-git-alt text-4xl text-primary mb-4"></i>
+                        <h3 class="font-bold mb-2">Git</h3>
+                        <p>Version control, collaboration</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                        <i class="fas fa-mobile-alt text-4xl text-primary mb-4"></i>
+                        <h3 class="font-bold mb-2">Responsive Design</h3>
+                        <p>Mobile-first approach</p>
+                    </div>
                 </div>
-                <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-8">
-                    <!-- Project 1 -->
-                    <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
-                        <img
-                            src="/placeholder.svg"
-                            width="550"
-                            height="310"
-                            alt="Project 1"
-                            class="mx-auto aspect-video overflow-hidden rounded-t-xl object-cover"
-                        />
-                        <div class="p-4 sm:p-6">
-                            <div class="space-y-2">
-                                <h3 class="text-xl font-bold">Project 1</h3>
-                                <p class="text-muted-foreground">Lorem ipsum</p>
-                                <div class="flex gap-2">
-                                    <a
-                                        class="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                                        href="#"
-                                    >
-                                        Live Demo
-                                    </a>
-                                    <a
-                                        class="inline-flex h-8 items-center justify-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                                        href="#"
-                                    >
-                                        View Code
-                                    </a>
-                                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-heading font-bold mb-8 text-center">Featured Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="h-48 bg-gray-300 flex items-center justify-center text-gray-500">
+                            <i class="fas fa-image text-4xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2">E-commerce Platform</h3>
+                            <p class="text-gray-700 mb-4">A fully responsive e-commerce website with product catalog, shopping cart, and checkout functionality.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-primary text-white text-sm px-2 py-1 rounded">React</span>
+                                <span class="bg-primary text-white text-sm px-2 py-1 rounded">Redux</span>
+                                <span class="bg-primary text-white text-sm px-2 py-1 rounded">Tailwind CSS</span>
                             </div>
+                            <a href="#" class="text-primary hover:underline">View Project</a>
                         </div>
                     </div>
-                    <!-- Project 2 -->
-                    <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
-                        <img
-                            src="/placeholder.svg"
-                            width="550"
-                            height="310"
-                            alt="Project 2"
-                            class="mx-auto aspect-video overflow-hidden rounded-t-xl object-cover"
-                        />
-                        <div class="p-4 sm:p-6">
-                            <div class="space-y-2">
-                                <h3 class="text-xl font-bold">Project 2</h3>
-                                <p class="text-muted-foreground">Lorem ipsum</p>
-                                <div class="flex gap-2">
-                                    <a
-                                        class="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                                        href="#"
-                                    >
-                                        Live Demo
-                                    </a>
-                                    <a
-                                        class="inline-flex h-8 items-center justify-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                                        href="#"
-                                    >
-                                        View Code
-                                    </a>
-                                </div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="h-48 bg-gray-300 flex items-center justify-center text-gray-500">
+                            <i class="fas fa-image text-4xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2">Task Management App</h3>
+                            <p class="text-gray-700 mb-4">A drag-and-drop task management application with real-time updates and team collaboration features.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-primary text-white text-sm px-2 py-1 rounded">Vue.js</span>
+                                <span class="bg-primary text-white text-sm px-2 py-1 rounded">Vuex</span>
+                                <span class="bg-primary text-white text-sm px-2 py-1 rounded">Firebase</span>
                             </div>
+                            <a href="#" class="text-primary hover:underline">View Project</a>
                         </div>
                     </div>
-                    <!-- Project 3 -->
-                    <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
-                        <img
-                            src="/placeholder.svg"
-                            width="550"
-                            height="310"
-                            alt="Project 3"
-                            class="mx-auto aspect-video overflow-hidden rounded-t-xl object-cover"
-                        />
-                        <div class="p-4 sm:p-6">
-                            <div class="space-y-2">
-                                <h3 class="text-xl font-bold">Project 3</h3>
-                                <p class="text-muted-foreground">Lorem ipsum</p>
-                                <div class="flex gap-2">
-                                    <a
-                                        class="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                                        href="#"
-                                    >
-                                        Live Demo
-                                    </a>
-                                    <a
-                                        class="inline-flex h-8 items-center justify-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                                        href="#"
-                                    >
-                                        View Code
-                                    </a>
-                                </div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="h-48 bg-gray-300 flex items-center justify-center text-gray-500">
+                            <i class="fas fa-image text-4xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2">Weather Dashboard</h3>
+                            <p class="text-gray-700 mb-4">An interactive weather dashboard with location-based forecasts, charts, and historical data visualization.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-primary text-white text-sm px-2 py-1 rounded">JavaScript</span>
+                                <span class="bg-primary text-white text-sm px-2 py-1 rounded">Chart.js</span>
+                                <span class="bg-primary text-white text-sm px-2 py-1 rounded">OpenWeatherMap API</span>
                             </div>
+                            <a href="#" class="text-primary hover:underline">View Project</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section class="w-full py-12 md:py-24 lg:py-32 bg-muted">
-            <div class="container px-4 md:px-6">
-                <div class="space-y-4 text-center">
-                    <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Skills</h2>
-                    <p class="max-w-[700px] mx-auto text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                        Here are some of the technologies I'm proficient in.
-                    </p>
-                </div>
-                <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 mt-8">
-                    <!-- Skill 1: HTML -->
-                    <div class="flex flex-col items-center justify-center space-y-2 p-4 bg-background rounded-lg">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="w-12 h-12"
-                        >
-                            <line x1="4" x2="20" y1="9" y2="9"></line>
-                            <line x1="4" x2="20" y1="15" y2="15"></line>
-                            <line x1="10" x2="8" y1="3" y2="21"></line>
-                            <line x1="16" x2="14" y1="3" y2="21"></line>
-                        </svg>
-                        <h3 class="text-xl font-bold">HTML</h3>
-                    </div>
-                    <!-- Skill 2: CSS -->
-                    <div class="flex flex-col items-center justify-center space-y-2 p-4 bg-background rounded-lg">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="w-12 h-12"
-                        >
-                            <path d="M4 4h16v4H4V4zm0 6h16v2H4v-2zm0 4h16v6H4v-6z"></path>
-                        </svg>
-                        <h3 class="text-xl font-bold">CSS</h3>
-                    </div>
-                    <!-- Skill 3: JavaScript -->
-                    <div class="flex flex-col items-center justify-center space-y-2 p-4 bg-background rounded-lg">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="w-12 h-12"
-                        >
-                            <path d="M4 4h16v16H4z"></path>
-                            <path d="M10 14h4v6h-4zm4-6h4v6h-4zm-4 0H6v6h4z"></path>
-                        </svg>
-                        <h3 class="text-xl font-bold">JavaScript</h3>
-                    </div>
-                    <!-- Skill 4: React -->
-                    <div class="flex flex-col items-center justify-center space-y-2 p-4 bg-background rounded-lg">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="w-12 h-12"
-                        >
-                            <circle cx="12" cy="12" r="4"></circle>
-                            <path
-                                d="M12 2c4 0 6 1.333 6 4 0 1.964-2 3-4 3.828M12 22c-4 0-6-1.333-6-4 0-1.964 2-3 4-3.828M2 12c0-4 1.333-6 4-6 1.964 0 3 2 3.828 4M22 12c0 4-1.333 6-4 6-1.964 0-3-2-3.828-4M2 12c0 4-1.333 6-4 6-1.964 0-3-2-3.828-4M12 2c4 0 6 1.333 6 4 0 1.964-2 3-4 3.828"
-                            ></path>
-                        </svg>
-                        <h3 class="text-xl font-bold">React</h3>
-                    </div>
+        <section id="contact" class="bg-secondary text-white py-20">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-heading font-bold mb-8">Get in Touch</h2>
+                <p class="text-xl mb-8">I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+                <div class="flex justify-center space-x-6">
+                    <a href="mailto:rahul.patra@example.com" class="text-white hover:text-accent transition-colors">
+                        <i class="fas fa-envelope text-3xl"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/rahulkumarpatra" target="_blank" rel="noopener noreferrer" class="text-white hover:text-accent transition-colors">
+                        <i class="fab fa-linkedin text-3xl"></i>
+                    </a>
+                    <a href="https://github.com/rahulkumarpatra" target="_blank" rel="noopener noreferrer" class="text-white hover:text-accent transition-colors">
+                        <i class="fab fa-github text-3xl"></i>
+                    </a>
+                    <a href="https://twitter.com/rahulkumarpatra" target="_blank" rel="noopener noreferrer" class="text-white hover:text-accent transition-colors">
+                        <i class="fab fa-twitter text-3xl"></i>
+                    </a>
                 </div>
             </div>
         </section>
-    </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Rahul Kumar Patra. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Add animation to skills section
+        const skillsSection = document.getElementById('skills');
+        const skillItems = skillsSection.querySelectorAll('.bg-white');
+
+        const animateSkills = () => {
+            skillItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.add('animate-fadeIn');
+                }, index * 100);
+            });
+        };
+
+        // Intersection Observer for skills section
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateSkills();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(skillsSection);
+
+        // Add custom styles for animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            .animate-fadeIn {
+                animation: fadeIn 0.5s ease-out forwards;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
 </body>
 </html>
