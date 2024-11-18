@@ -3,13 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terminal Simulation</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+  <title>Interactive Card Layout</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div id="container">
-    <div class="terminal" id="terminal"></div> <!-- Terminal box -->
+    <!-- Example Card -->
+    <div class="card" data-id="1">
+      <div class="card-header">Profile</div>
+      <div class="card-content">
+        <p>John Doe</p>
+        <button class="modal-trigger" data-target="modal-1">More Info</button>
+      </div>
+    </div>
+
+    <div class="card" data-id="2">
+      <div class="card-header">Skills</div>
+      <div class="card-content">
+        <ul>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Node.js</li>
+        </ul>
+        <button class="modal-trigger" data-target="modal-2">More Info</button>
+      </div>
+    </div>
+
+    <!-- Audio Feed -->
+    <div class="audio-visualizer">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+    <!-- Terminal Simulation -->
+    <div class="terminal">
+      <div class="terminal-content"></div>
+    </div>
+
+    <!-- Modals -->
+    <div id="modal-1" class="modal">
+      <div class="modal-content">
+        <h2>Profile Details</h2>
+        <p>This is John Doe's detailed profile.</p>
+      </div>
+    </div>
+    <div id="modal-2" class="modal">
+      <div class="modal-content">
+        <h2>Skills Details</h2>
+        <p>Detailed skills information.</p>
+      </div>
+    </div>
   </div>
-  <script src="script.js"></script> <!-- Link to external JavaScript -->
+
+  <script src="script.js"></script>
 </body>
 </html>
