@@ -1,61 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Card Layout</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div id="container">
-    <!-- Example Card -->
-    <div class="card" data-id="1">
-      <div class="card-header">Profile</div>
-      <div class="card-content">
-        <p>John Doe</p>
-        <button class="modal-trigger" data-target="modal-1">More Info</button>
-      </div>
-    </div>
+<html lang="en-US">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;700&display=swap"
+    />
+    <link rel="stylesheet" href="/css/styles.min.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
 
-    <div class="card" data-id="2">
-      <div class="card-header">Skills</div>
-      <div class="card-content">
-        <ul>
-          <li>JavaScript</li>
-          <li>React</li>
-          <li>Node.js</li>
-        </ul>
-        <button class="modal-trigger" data-target="modal-2">More Info</button>
-      </div>
-    </div>
+    <title>Ashu Jha</title>
+    <meta charset="utf-8" />
 
-    <!-- Audio Feed -->
-    <div class="audio-visualizer">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Full Stack Developer, Blockchain Developer, Casino Game Developer"
+    />
+    <link rel="canonical" href="/" />
 
-    <!-- Terminal Simulation -->
-    <div class="terminal">
-      <div class="terminal-content"></div>
-    </div>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ashu Jha" />
+    <meta property="og:site_name" content="Personal Website" />
+    <meta property="og:url" content="https://ashujha.xyz/" />
+    <meta
+      property="og:image"
+      content="https://ashujha.xyz/images/selfie.jpg"
+    />
+    <meta
+      property="og:description"
+      content="Full Stack Developer, Blockchain Developer, Casino Game Developer"
+    />
+    <meta name="twitter:title" content="Ashu Jha" />
+    <meta
+      name="twitter:description"
+      content="Full Stack Developer, Blockchain Developer, Casino Game Developer"
+    />
+    <meta
+      name="twitter:image"
+      content="https://ashujha.xyz/images/selfie.jpg"
+    />
+    <meta name="twitter:card" content="summary" />
+  </head>
 
-    <!-- Modals -->
-    <div id="modal-1" class="modal">
-      <div class="modal-content">
-        <h2>Profile Details</h2>
-        <p>This is John Doe's detailed profile.</p>
-      </div>
+  <body>
+    <div class="world-map"></div>
+    <div class="video-background">
+      <video autoplay muted loop>
+        <source src="/images/background.webm" type="video/webm" />
+      </video>
     </div>
-    <div id="modal-2" class="modal">
-      <div class="modal-content">
-        <h2>Skills Details</h2>
-        <p>Detailed skills information.</p>
-      </div>
+    <div class="card terminal">
+      <div class="card-header">Terminal</div>
+      <div class="card-body"></div>
     </div>
-  </div>
+    <div class="cards-container"></div>
 
-  <script src="script.js"></script>
-</body>
+    <script src="/js/ua-parser.min.js"></script>
+    <script src="/js/analytics.min.js"></script>
+
+    <script src="/js/terminal.min.js"></script>
+    <script src="/js/app.min.js"></script>
+  </body>
 </html>
